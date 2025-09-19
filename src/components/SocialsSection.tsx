@@ -11,7 +11,7 @@ const SocialsSection = () => {
   ];
 
   return (
-    <section id="socials" className="py-20 px-4">
+    <section id="socials" className="min-h-screen flex flex-col justify-center py-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">MY SOCIALS</h2>
         <p className="text-muted-foreground mb-12 text-lg">

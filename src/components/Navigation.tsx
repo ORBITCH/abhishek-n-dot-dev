@@ -19,10 +19,12 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { name: "Projects", id: "projects" },
+    { name: "Home", id: "hero" },
+    { name: "Tech Stack", id: "techstack" },
     { name: "Socials", id: "socials" },
-    { name: "Achievements", id: "projects" },
+    { name: "Projects", id: "projects" },
     { name: "About", id: "about" },
+    { name: "Work Together", id: "work" },
   ];
 
   return (

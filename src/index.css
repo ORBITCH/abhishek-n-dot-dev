@@ -150,33 +150,34 @@
 
   .tech-card {
     backdrop-filter: blur(10px);
-    border: 1px solid hsl(var(--border));
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .project-card {
     background: var(--card-gradient);
     backdrop-filter: blur(20px);
-    border: 1px solid hsl(var(--border) / 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition-smooth);
   }
 
   .project-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--glow);
-    border-color: hsl(var(--primary) / 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
   }
 
   .hero-button {
     background: var(--card-gradient);
-    border: 1px solid hsl(var(--border));
+    border: 1px solid rgba(255, 255, 255, 0.2);
     transition: var(--transition-smooth);
   }
 
   .hero-button:hover {
-    background: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
+    background: rgba(255, 255, 255, 0.05);
+    color: hsl(var(--foreground));
     box-shadow: var(--subtle-glow);
     transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.4);
   }
 }
 

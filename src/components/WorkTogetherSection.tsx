@@ -13,35 +13,35 @@ const WorkTogetherSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="project-card rounded-lg p-8 text-center">
+          <div className="project-card rounded-lg p-8 text-center flex flex-col h-full">
             <div className="bg-accent rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
               <Calendar className="h-8 w-8 text-accent-foreground" />
             </div>
             <h3 className="text-2xl font-bold mb-4">Schedule a Call</h3>
-            <p className="text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-muted-foreground mb-8 leading-relaxed flex-grow">
               Book a consultation call to discuss your project requirements and see how we can work together.
             </p>
             <Button 
               size="lg" 
-              className="hero-button w-full"
+              className="hero-button w-full mt-auto"
               onClick={() => window.open("mailto:contact@example.com", "_blank")}
             >
               Contact Me
             </Button>
           </div>
 
-          <div className="project-card rounded-lg p-8 text-center">
+          <div className="project-card rounded-lg p-8 text-center flex flex-col h-full">
             <div className="bg-accent rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
               <Mail className="h-8 w-8 text-accent-foreground" />
             </div>
             <h3 className="text-2xl font-bold mb-4">Drop a Mail</h3>
-            <p className="text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-muted-foreground mb-8 leading-relaxed flex-grow">
               Send me an email with your project details and I'll get back to you within 24 hours.
             </p>
             <Button 
               size="lg" 
               variant="outline" 
-              className="hero-button w-full"
+              className="hero-button w-full mt-auto"
               onClick={() => window.open("mailto:abhishek@example.com", "_blank")}
             >
               Email

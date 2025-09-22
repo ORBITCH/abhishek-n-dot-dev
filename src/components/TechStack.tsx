@@ -12,27 +12,28 @@ import {
   Coffee,
   Zap
 } from "lucide-react";
+import { Progress } from "./ui/progress";
 
 const TechStack = () => {
   const technologies = [
-    { name: "HTML5", icon: Code },
-    { name: "CSS3", icon: Palette },
-    { name: "JavaScript", icon: Zap },
-    { name: "TypeScript", icon: Code },
-    { name: "Python", icon: Coffee },
-    { name: "Java", icon: Coffee },
-    { name: "React", icon: Globe },
-    { name: "Next.js", icon: Globe },
-    { name: "Node.js", icon: Server },
-    { name: "Express", icon: Server },
-    { name: "Ruby on Rails", icon: Server },
-    { name: "PHP", icon: Server },
-    { name: "MongoDB", icon: Database },
-    { name: "PostgreSQL", icon: Database },
-    { name: "AWS", icon: Cloud },
-    { name: "Docker", icon: Boxes },
-    { name: "Git", icon: GitBranch },
-    { name: "Firebase", icon: Cloud },
+    { name: "HTML5", icon: Code, skill: 90 },
+    { name: "CSS3", icon: Palette, skill: 85 },
+    { name: "JavaScript", icon: Zap, skill: 95 },
+    { name: "TypeScript", icon: Code, skill: 88 },
+    { name: "Python", icon: Coffee, skill: 92 },
+    { name: "Java", icon: Coffee, skill: 85 },
+    { name: "React", icon: Globe, skill: 90 },
+    { name: "Next.js", icon: Globe, skill: 80 },
+    { name: "Node.js", icon: Server, skill: 88 },
+    { name: "Express", icon: Server, skill: 85 },
+    { name: "Ruby on Rails", icon: Server, skill: 75 },
+    { name: "PHP", icon: Server, skill: 70 },
+    { name: "MongoDB", icon: Database, skill: 82 },
+    { name: "PostgreSQL", icon: Database, skill: 80 },
+    { name: "AWS", icon: Cloud, skill: 78 },
+    { name: "Docker", icon: Boxes, skill: 75 },
+    { name: "Git", icon: GitBranch, skill: 95 },
+    { name: "Firebase", icon: Cloud, skill: 82 },
   ];
 
   // Duplicate for seamless infinite scroll
@@ -58,6 +59,14 @@ const TechStack = () => {
               >
                 <IconComponent className="h-8 w-8 text-primary tech-icon" />
                 <span className="text-lg font-semibold">{tech.name}</span>
+                <div className="w-full">
+                  <div className="flex justify-between text-xs text-muted-foreground mb-1">
+                    <span>0</span>
+                    <span>{tech.skill}%</span>
+                    <span>100</span>
+                  </div>
+                  <Progress value={tech.skill} className="h-2" />
+                </div>
               </div>
             );
           })}

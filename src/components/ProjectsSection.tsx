@@ -35,7 +35,7 @@ const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="project-card rounded-lg p-6 h-full">
+            <div key={index} className="project-card rounded-lg p-6 h-full flex flex-col">
               <div className="flex items-start justify-between mb-4">
                 <h3 className="text-xl font-bold leading-tight pr-4">
                   {project.title}
@@ -48,7 +48,7 @@ const ProjectsSection = () => {
                 {project.dates}
               </div>
 
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-muted-foreground mb-6 leading-relaxed flex-grow">
                 {project.description}
               </p>
 
@@ -63,7 +63,7 @@ const ProjectsSection = () => {
                 ))}
               </div>
 
-              <Button variant="outline" size="sm" className="hero-button w-full">
+              <Button variant="outline" size="sm" className="hero-button w-full mt-auto">
                 View Details
               </Button>
             </div>

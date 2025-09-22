@@ -146,11 +146,17 @@
   .social-hover:hover {
     transform: translateY(-8px) scale(1.1);
     box-shadow: var(--glow);
+    border: 1px solid rgba(255, 255, 255, 1);
   }
 
   .tech-card {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition-smooth);
+  }
+
+  .tech-card:hover {
+    border: 1px solid rgba(255, 255, 255, 1);
   }
 
   .project-card {
@@ -163,7 +169,7 @@
   .project-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--glow);
-    border-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 1);
   }
 
   .hero-button {
@@ -177,7 +183,15 @@
     color: hsl(var(--foreground));
     box-shadow: var(--subtle-glow);
     transform: translateY(-1px);
-    border-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  /* Global hover border rule for all interactive elements */
+  button:hover,
+  a:hover,
+  .hover\\:border:hover,
+  [role="button"]:hover {
+    border: 1px solid rgba(255, 255, 255, 1) !important;
   }
 }
 

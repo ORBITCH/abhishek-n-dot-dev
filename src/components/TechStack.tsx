@@ -56,7 +56,7 @@ const TechStack = () => {
                 key={`${tech.name}-${index}`}
                 className="flex-shrink-0 mx-6 tech-card bg-card rounded-lg px-8 py-6 min-w-[200px] text-center flex flex-col items-center gap-4"
               >
-                <IconComponent className="h-8 w-8 text-primary" />
+                <IconComponent className="h-8 w-8 text-primary tech-icon" />
                 <span className="text-lg font-semibold">{tech.name}</span>
               </div>
             );

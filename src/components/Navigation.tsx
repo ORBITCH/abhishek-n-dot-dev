@@ -15,18 +15,34 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({
-      behavior: "smooth",
-    });
-    setIsMobileMenuOpen(false); // Close mobile menu after clicking
+    const element = document.getElementById(sectionId);
+    if (element) {
+      // Add fade-out effect to current view
+      document.body.style.opacity = '0.7';
+      
+      // Scroll to section
+      element.scrollIntoView({
+        behavior: "smooth",
+      });
+      
+      // Add fade-in effect after scrolling
+      setTimeout(() => {
+        document.body.style.opacity = '1';
+        element.classList.add('animate-fade-in');
+        setTimeout(() => {
+          element.classList.remove('animate-fade-in');
+        }, 500);
+      }, 300);
+    }
+    setIsMobileMenuOpen(false);
   };
 
   const navItems = [
     { name: "Home", id: "hero" },
     { name: "Tech Stack", id: "techstack" },
-    { name: "Socials", id: "socials" },
     { name: "Projects", id: "projects" },
     { name: "About", id: "about" },
+    { name: "Socials", id: "socials" },
     { name: "Work Together", id: "work" },
   ];
 
@@ -67,7 +83,7 @@ const Navigation = () => {
               onClick={() => window.open("https://github.com", "_blank")}
               variant="outline"
               size="sm"
-              className="hero-button border-white/30 hover:border-white hover:bg-white/10"
+              className="hero-button"
             >
               🧠 My Projects
             </Button>
@@ -101,17 +117,17 @@ const Navigation = () => {
                 </button>
               ))}
               <div className="pt-2">
-                <Button
-                  onClick={() => {
-                    window.open("https://github.com", "_blank");
-                    setIsMobileMenuOpen(false);
-                  }}
-                  variant="outline"
-                  size="sm"
-                  className="w-full hero-button border-white/30 hover:border-white hover:bg-white/10"
-                >
-                  🧠 My Projects
-                </Button>
+                  <Button
+                    onClick={() => {
+                      window.open("https://github.com", "_blank");
+                      setIsMobileMenuOpen(false);
+                    }}
+                    variant="outline"
+                    size="sm"
+                    className="w-full hero-button"
+                  >
+                    🧠 My Projects
+                  </Button>
               </div>
             </div>
           </div>

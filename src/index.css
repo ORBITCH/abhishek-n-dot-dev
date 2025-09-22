@@ -146,6 +146,9 @@
   .social-hover:hover {
     transform: translateY(-8px) scale(1.1);
     box-shadow: var(--glow);
+  }
+
+  .social-hover:hover .social-card {
     border: 1px solid rgba(255, 255, 255, 1);
   }
 
@@ -157,6 +160,10 @@
 
   .tech-card:hover {
     border: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  .tech-card:hover .tech-icon {
+    color: rgb(255, 255, 255) !important;
   }
 
   .project-card {

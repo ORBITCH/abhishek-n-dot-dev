@@ -29,7 +29,7 @@ const SocialsSection = () => {
                 rel="noopener noreferrer"
                 className="social-hover group"
               >
-                <div className="bg-card border border-border rounded-lg p-6 flex flex-col items-center justify-center aspect-square">
+                <div className="bg-card border border-border rounded-lg p-6 flex flex-col items-center justify-center aspect-square social-card">
                   <IconComponent 
                     className="h-8 w-8 mb-3 group-hover:text-primary transition-colors" 
                   />

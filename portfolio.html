@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhishek N - Software Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <meta name="description" content="Software Developer specializing in JavaScript, Python, React. Passionate about creating innovative solutions and system architecture.">
+    <meta name="author" content="Abhishek N" />
+    <meta name="keywords" content="software developer, system design, javascript, python, react, full-stack developer">
+
+    <meta property="og:title" content="Abhishek N - Software Developer & System Designer" />
+    <meta property="og:description" content="Software Developer specializing in JavaScript, Python, React. Passionate about creating innovative solutions and system architecture." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Abhishek N - Software Developer" />
+    <meta name="twitter:description" content="Software Developer specializing in JavaScript, Python, React. Creating innovative solutions." />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <link rel="icon" type="image/x-icon" href="https://storage.googleapis.com/gpt-engineer-file-uploads/Q4G8ZyBSGvbVcpIe9RmYxyWADIi2/uploads/1758539090897-physics-neon-sign-motion-atoms-night-bright-advertisement.png">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo" onclick="scrollToTop()">
+                    Abhishek N
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-links-desktop">
+                    <button onclick="scrollToSection('hero')" class="nav-link">
+                        Home
+                        <span class="nav-underline"></span>
+                    </button>
+                    <button onclick="scrollToSection('techstack')" class="nav-link">
+                        Tech Stack
+                        <span class="nav-underline"></span>
+                    </button>
+                    <button onclick="scrollToSection('projects')" class="nav-link">
+                        Projects
+                        <span class="nav-underline"></span>
+                    </button>
+                    <button onclick="scrollToSection('about')" class="nav-link">
+                        About
+                        <span class="nav-underline"></span>
+                    </button>
+                    <button onclick="scrollToSection('socials')" class="nav-link">
+                        Socials
+                        <span class="nav-underline"></span>
+                    </button>
+                    <button onclick="scrollToSection('work')" class="nav-link">
+                        Work Together
+                        <span class="nav-underline"></span>
+                    </button>
+                </div>
+
+                <!-- Theme Toggle -->
+                <div class="theme-toggle-container">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <div class="theme-toggle-track">
+                            <div class="theme-toggle-thumb">
+                                <svg class="sun-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="5"/>
+                                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                                </svg>
+                                <svg class="moon-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Toggle menu">
+                    <svg class="hamburger-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="4" x2="20" y1="12" y2="12"/>
+                        <line x1="4" x2="20" y1="6" y2="6"/>
+                        <line x1="4" x2="20" y1="18" y2="18"/>
+                    </svg>
+                    <svg class="close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m18 6-12 12"/>
+                        <path d="m6 6 12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <div class="mobile-menu-content">
+                    <button onclick="scrollToSection('hero')" class="mobile-nav-link">Home</button>
+                    <button onclick="scrollToSection('techstack')" class="mobile-nav-link">Tech Stack</button>
+                    <button onclick="scrollToSection('projects')" class="mobile-nav-link">Projects</button>
+                    <button onclick="scrollToSection('about')" class="mobile-nav-link">About</button>
+                    <button onclick="scrollToSection('socials')" class="mobile-nav-link">Socials</button>
+                    <button onclick="scrollToSection('work')" class="mobile-nav-link">Work Together</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-background"></div>
+        
+        <div class="floating-elements">
+            <div class="floating-dot floating-dot-1"></div>
+            <div class="floating-dot floating-dot-2"></div>
+            <div class="floating-dot floating-dot-3"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Abhishek N</h1>
+                
+                <div class="hero-subtitle-container">
+                    <p class="hero-subtitle">
+                        I'm a <span id="rotating-skill" class="rotating-skill">JavaScript Developer</span>
+                    </p>
+                </div>
+
+                <p class="hero-description">I'm a MERN stack developer with 3+ years of freelancing experience, specializing in FRONTEND development. I've worked as a MERN intern at Speedup Infotech and delivered multiple projects as a FREELANCER. Currently, I'm exploring SALESFORCE Pardot while sharpening my UI/UX skills. Open to REMOTE opportunities.</p>
+
+                <div class="hero-buttons">
+                    <button class="hero-button" onclick="window.open('#', '_blank')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7,10 12,15 17,10"/>
+                            <line x1="12" x2="12" y1="15" y2="3"/>
+                        </svg>
+                        Get CV
+                    </button>
+                    <button class="hero-button hero-button-outline" onclick="window.open('https://github.com', '_blank')">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                        </svg>
+                        GitHub
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="techstack" class="techstack-section">
+        <div class="section-header">
+            <h2 class="section-title">Tech Stack</h2>
+            <p class="section-subtitle">Technologies and tools I work with</p>
+        </div>
+
+        <div class="tech-slider-container">
+            <div id="tech-slider" class="tech-slider">
+                <!-- Tech cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="projects-container">
+            <div class="section-header">
+                <h2 class="section-title">MY PROJECTS</h2>
+                <p class="section-subtitle">Some of my professional work</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Machine Code Design – BookMyShow</h3>
+                        <svg class="project-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 7h10v10"/>
+                            <path d="M7 17 17 7"/>
+                        </svg>
+                    </div>
+
+                    <div class="project-date">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                            <line x1="16" x2="16" y1="2" y2="6"/>
+                            <line x1="8" x2="8" y1="2" y2="6"/>
+                            <line x1="3" x2="21" y1="10" y2="10"/>
+                        </svg>
+                        01/2024 – 07/2024
+                    </div>
+
+                    <p class="project-description">Studied and designed the complete low-level architecture for systems such as BookMyShow.</p>
+
+                    <div class="project-tags">
+                        <span class="project-tag">System Design</span>
+                        <span class="project-tag">Architecture</span>
+                        <span class="project-tag">Low-Level Design</span>
+                    </div>
+
+                    <button class="project-button">View Details</button>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">HLD – Hotstar, Uber, Elastic Search</h3>
+                        <svg class="project-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 7h10v10"/>
+                            <path d="M7 17 17 7"/>
+                        </svg>
+                    </div>
+
+                    <div class="project-date">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                            <line x1="16" x2="16" y1="2" y2="6"/>
+                            <line x1="8" x2="8" y1="2" y2="6"/>
+                            <line x1="3" x2="21" y1="10" y2="10"/>
+                        </svg>
+                        07/2024 – 09/2024
+                    </div>
+
+                    <p class="project-description">Designed HLDs of systems such as Hotstar, Uber, Elastic Search.</p>
+
+                    <div class="project-tags">
+                        <span class="project-tag">High-Level Design</span>
+                        <span class="project-tag">System Architecture</span>
+                        <span class="project-tag">Scalability</span>
+                    </div>
+
+                    <button class="project-button">View Details</button>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Password Manager Application</h3>
+                        <svg class="project-link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 7h10v10"/>
+                            <path d="M7 17 17 7"/>
+                        </svg>
+                    </div>
+
+                    <div class="project-date">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                            <line x1="16" x2="16" y1="2" y2="6"/>
+                            <line x1="8" x2="8" y1="2" y2="6"/>
+                            <line x1="3" x2="21" y1="10" y2="10"/>
+                        </svg>
+                        10/2023 – 01/2024
+                    </div>
+
+                    <p class="project-description">Java, Springboot, AWS – Java + AWS + Springboot integration.</p>
+
+                    <div class="project-tags">
+                        <span class="project-tag">Java</span>
+                        <span class="project-tag">Spring Boot</span>
+                        <span class="project-tag">AWS</span>
+                        <span class="project-tag">Security</span>
+                    </div>
+
+                    <button class="project-button">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Crafting sleek interfaces and smart solutions — code meets design.</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">Hey, I'm Abhishek 👋
+
+I'm a MERN stack developer who loves turning ideas into clean, responsive, and engaging web experiences. Over the past 3+ years, I've FREELANCED on multiple projects, helping clients bring their products to life with React, JavaScript, HTML, and CSS.
+
+I kickstarted my career as a MERN intern at Speedup Infotech, then moved on to freelancing full-time, and most recently I've been diving into Salesforce Pardot for about a year.
+
+Alongside coding,
+I'm learning UI/UX because I believe design and development go hand-in-hand. I enjoy remote work, building products that make an impact, and collaborating with teams who care about great user experiences.
+
+Let's create something amazing together!</p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16,18 22,12 16,6"/>
+                                    <polyline points="8,6 2,12 8,18"/>
+                                </svg>
+                            </div>
+                            <h4 class="highlight-title">Clean Code</h4>
+                            <p class="highlight-description">Writing maintainable and scalable code with best practices</p>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                    <path d="M12 17h.01"/>
+                                </svg>
+                            </div>
+                            <h4 class="highlight-title">Problem Solver</h4>
+                            <p class="highlight-description">Turning complex challenges into elegant solutions</p>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                </svg>
+                            </div>
+                            <h4 class="highlight-title">Always Learning</h4>
+                            <p class="highlight-description">Staying updated with the latest technologies and trends</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-facts">
+                    <div class="facts-card">
+                        <h3 class="facts-title">Quick Facts</h3>
+                        <div class="facts-list">
+                            <div class="fact-item">
+                                <span class="fact-label">Location:</span>
+                                <span class="fact-value">India</span>
+                            </div>
+                            <div class="fact-item">
+                                <span class="fact-label">Experience:</span>
+                                <span class="fact-value">3+ Years</span>
+                            </div>
+                            <div class="fact-item">
+                                <span class="fact-label">Specialization:</span>
+                                <span class="fact-value">Front-End Development</span>
+                            </div>
+                            <div class="fact-item">
+                                <span class="fact-label">Current Focus:</span>
+                                <span class="fact-value">UI/UX and FrontEnd</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Socials Section -->
+    <section id="socials" class="socials-section">
+        <div class="socials-container">
+            <div class="section-header">
+                <h2 class="section-title">MY SOCIALS</h2>
+                <p class="section-subtitle">Connect with me across different platforms</p>
+            </div>
+
+            <div class="socials-grid">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </div>
+                    <span class="social-name">Facebook</span>
+                </a>
+
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                        </svg>
+                    </div>
+                    <span class="social-name">GitHub</span>
+                </a>
+
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                        </svg>
+                    </div>
+                    <span class="social-name">Twitter</span>
+                </a>
+
+                <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                        </svg>
+                    </div>
+                    <span class="social-name">WhatsApp</span>
+                </a>
+
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                            <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                        </svg>
+                    </div>
+                    <span class="social-name">Instagram</span>
+                </a>
+
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect width="4" height="12" x="2" y="9"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </div>
+                    <span class="social-name">LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Together Section -->
+    <section id="work" class="work-section">
+        <div class="work-container">
+            <div class="section-header">
+                <h2 class="section-title">Work Together</h2>
+                <p class="section-subtitle">Let's collaborate on your next project</p>
+            </div>
+
+            <div class="work-grid">
+                <div class="work-card">
+                    <div class="work-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                            <line x1="16" x2="16" y1="2" y2="6"/>
+                            <line x1="8" x2="8" y1="2" y2="6"/>
+                            <line x1="3" x2="21" y1="10" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="work-title">Schedule a Call</h3>
+                    <p class="work-description">Book a consultation call to discuss your project requirements and see how we can work together.</p>
+                    <button class="work-button" onclick="window.open('mailto:contact@example.com', '_blank')">Contact Me</button>
+                </div>
+
+                <div class="work-card">
+                    <div class="work-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <h3 class="work-title">Drop a Mail</h3>
+                    <p class="work-description">Send me an email with your project details and I'll get back to you within 24 hours.</p>
+                    <button class="work-button work-button-outline" onclick="window.open('mailto:abhishek@example.com', '_blank')">Email</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
